@@ -1,6 +1,5 @@
 from django.urls import path
-from piloto.views import CadastrarAlunoView, CampusCreateView, CursoCreateView, DefaultView, ExcluirAlunoView, ListaAlunosView, EditarAlunoView, ListarCampus, ListaAlunosAPIView, LoginViewAPI
-from piloto.views.Login import LoginView
+from piloto.views import CadastrarAlunoView, CampusCreateView, CursoCreateView, DefaultView, ExcluirAlunoView, ListaAlunosView, EditarAlunoView, ListarCampus, ListaAlunosAPIView, LoginViewAPI, LoginView, AdicionarAlunoAPIView
 
 
 urlpatterns = [
@@ -14,9 +13,9 @@ urlpatterns = [
     path('excluirAluno/<int:pk>/', ExcluirAlunoView.as_view(), name='excluirAluno'),
     path('login/', LoginView.as_view(), name='Login'),
     #########API#############
-
     path('api/alunos/', ListaAlunosAPIView.as_view(), name='apiListaAlunos'),
 
     path('api/token/', LoginViewAPI.as_view(), name='token_obtain_pair'),
+    path('api/adicionar-aluno/', AdicionarAlunoAPIView.as_view(), name='adicionar-aluno-api'),
 
 ]

@@ -6,7 +6,9 @@ from .ListaAlunosView import ListaAlunosView
 from .EditarAluno import EditarAlunoView
 from .ListarCampus import ListarCampus
 from .ExcluirAluno import ExcluirAlunoView
-from .Login import LoginView
+from .LoginView import LoginViewAPI
 from .ListaAlunosAPIView import ListaAlunosAPIView
-from.LoginView import LoginViewAPI
+from .Login import LoginView
+
+from .AdicionarAlunoAPIView import AdicionarAlunoAPIView
 
